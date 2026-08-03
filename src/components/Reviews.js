@@ -96,6 +96,7 @@ const ratingFilters = [5, 4, 3, 2, 1];
 const Reviews = () => {
   const [reviews, setReviews] = useState(initialReviews);
   const [activeFilter, setActiveFilter] = useState("all");
+  const API_URL = process.env.API_URL;
 
   const [form, setForm] = useState({ name: "", hotelname: "", quote: "" });
   const [formRating, setFormRating] = useState(0);
@@ -141,7 +142,7 @@ const Reviews = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:8080/api/reviews", {
+      const response = await fetch(`${API_URL}/api/reviews`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newReview),

@@ -25,7 +25,7 @@ const MenuCartItem = ({ data }) => {
   const dispatch=useDispatch();
 
   const callanotherfunction=(data)=>{
-    alert("function called");
+    alert("Item Added to the Cart");
     dispatch(addItem(data))
   
 

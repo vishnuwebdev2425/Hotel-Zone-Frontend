@@ -15,6 +15,7 @@ const statusMeta = {
 const ShowDinning = () => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const API_URL = process.env.API_URL;
 
   const token = Cookies.get("jwttoken");
   if (!token) {
@@ -26,8 +27,8 @@ const ShowDinning = () => {
   }, []);
 
   const callingDiiningFunction = async () => {
-    console.log("DinningFunction Called");
-    const url = "http://localhost:8080/api/restaurants/getalldinning";
+   
+    const url = `${API_URL}/api/restaurants/getalldinning`;
 
     const options = {
       method: "GET",
@@ -39,14 +40,14 @@ const ShowDinning = () => {
 
     try {
       const response = await fetch(url, options);
-      console.log(response);
+  
       if (response.ok != true) {
         alert("Something Went Wrong");
       } else {
         const coonvertedData = await response.json();
-        console.log(coonvertedData);
+        
         setData(coonvertedData);
-        console.log(data);
+      
       }
     } finally {
       setIsLoading(false);

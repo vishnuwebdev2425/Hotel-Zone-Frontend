@@ -10,6 +10,7 @@ const Menu = () => {
   const [loading, setLoading] = useState(true);
 
   const jwt=Cookies.get("jwttoken");
+  const API_URL = process.env.API_URL;
   
   useEffect(() => {
     callcheckMenu();
@@ -17,7 +18,7 @@ const Menu = () => {
 
   const callcheckMenu = async () => {
     try {
-      const url = "http://localhost:8080/api/restaurants/getallmenu";
+      const url = `${API_URL}/api/restaurants/getallmenu`;
       const options = {
         method: "GET",
         headers: {
@@ -27,6 +28,7 @@ const Menu = () => {
       };
 
       const response = await fetch(url, options);
+    
       if (!response.ok) {
         alert("Something Went Wrong Please Try Again Later");
       } else {

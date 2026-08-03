@@ -33,9 +33,7 @@ const App=()=>{
         number:""
     })
 
-    useEffect(() => {
-      console.log("APP USER:", user);
-      
+    useEffect(() => {     
     }, [user]);
 
     return (

@@ -17,6 +17,7 @@ const HotelLogin = () => {
   });
 
   const navigate=useNavigate();
+  const API_URL = process.env.API_URL;
   
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,7 +31,6 @@ const HotelLogin = () => {
 
   const handleSubmit =async (e) => {
     e.preventDefault();
-    console.log("Form Submitted:", data);
 
     const newObj={
         number:data.number,
@@ -46,7 +46,7 @@ const HotelLogin = () => {
 
 
 
-    const url = "http://localhost:8080/api/restaurants/checkuser";
+    const url = `${API_URL}/api/restaurants/checkuser`;
     const options={
         method:"POST",
         headers:{

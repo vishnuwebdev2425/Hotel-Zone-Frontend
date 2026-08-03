@@ -49,6 +49,7 @@ const Dinning = () => {
   const [toast, setToast] = useState(null); // { type: 'success' | 'error', message }
 
   const jwt = Cookies.get("jwttoken");
+  const API_URL = process.env.API_URL;
 
   const chnagedinningId = (e) => {
     setData({
@@ -97,7 +98,7 @@ const Dinning = () => {
       status: data.status,
     };
 
-    const url = "http://localhost:8080/api/restaurants/adddinning";
+    const url = `${API_URL}/api/restaurants/adddinning`;
 
     const options = {
       method: "POST",

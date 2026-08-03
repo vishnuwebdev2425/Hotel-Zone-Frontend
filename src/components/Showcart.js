@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { clearItem } from "../utils/Cart";
 
 import MenuCartItems from "./MenuCartItems";
+import { Link } from "react-router-dom";
 
 /**
  * Uses the same fonts as the rest of the app — make sure this is in your
@@ -57,12 +58,14 @@ const Showcart = () => {
           <p className="text-[#0F2A22]/55 text-sm mb-8">
             Browse the menu and add a dish to get started.
           </p>
-          <a
-            href="/menu"
-            className="inline-block bg-[#0F2A22] text-[#F3EFE6] text-sm font-semibold tracking-wide px-7 py-3 rounded-sm hover:bg-[#0F2A22]/90 transition-colors"
-          >
-            Browse menu
-          </a>
+          <Link to="/admin/checkmenu">
+            <button
+              type="button"
+              className="inline-block bg-[#0F2A22] text-[#F3EFE6] text-sm font-semibold tracking-wide px-7 py-3 rounded-sm hover:bg-[#0F2A22]/90 transition-colors"
+            >
+              Browse menu
+            </button>
+          </Link>
         </div>
       </div>
     );

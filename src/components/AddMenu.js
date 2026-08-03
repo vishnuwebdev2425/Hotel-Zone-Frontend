@@ -23,6 +23,7 @@ const AddMenu = () => {
     imgurl: "",
     price: "",
   });
+  const API_URL = process.env.API_URL;
 
   const changeItemType = (e) => {
     setData({
@@ -69,7 +70,7 @@ const AddMenu = () => {
       price: "",
     });
 
-    const url = "http://localhost:8080/api/restaurants/addmenuitem";
+    const url = `${API_URL}/api/restaurants/addmenuitem`;
 
     const options={
         method:"POST",

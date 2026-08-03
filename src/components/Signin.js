@@ -16,6 +16,7 @@ const Signin = () => {
   });
 
   const navigate=useNavigate();
+  const API_URL = process.env.API_URL;
   const changenumber = (e) => {
     setData({
       ...data,
@@ -43,7 +44,7 @@ const Signin = () => {
     });
 
 
-    const url = "http://localhost:8080/api/restaurants/signin";
+    const url = `${API_URL}/api/restaurants/signin`;
     const options={
       method:"POST",
       headers:{

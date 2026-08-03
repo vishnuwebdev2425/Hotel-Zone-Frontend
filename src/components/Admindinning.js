@@ -43,7 +43,9 @@ const statusMeta = {
 
 const AdminDinning = ({ dinning, onStatusChanged, onDeleted }) => {
   const { id, dinningid, capacity, floor, ac, status, register } = dinning;
-  const [busy, setBusy] = useState(null); // 'available' | 'occupied' | 'delete' | null
+  const [busy, setBusy] = useState(null); 
+  // 'available' | 'occupied' | 'delete' | null
+  const API_URL = process.env.API_URL;
 
   const jwt = Cookies.get("jwttoken");
   const meta = statusMeta[status];
@@ -56,7 +58,7 @@ const AdminDinning = ({ dinning, onStatusChanged, onDeleted }) => {
     try {
   
 
-      const STATUS_URL = `http://localhost:8080/api/restaurants/updatestatus/${dinningid}`;
+      const STATUS_URL = `${API_URL}/api/restaurants/updatestatus/${dinningid}`;
       const response = await fetch(STATUS_URL, {
         method: "PUT",
         headers: {
@@ -88,7 +90,7 @@ const AdminDinning = ({ dinning, onStatusChanged, onDeleted }) => {
     try {
 
       
-      const DELETE_URL = `http://localhost:8080/api/restaurants/deletedinning/${dinningid}`;
+      const DELETE_URL = `${API_URL}/api/restaurants/deletedinning/${dinningid}`;
       const response = await fetch(DELETE_URL, {
         method: "DELETE",
         headers: {

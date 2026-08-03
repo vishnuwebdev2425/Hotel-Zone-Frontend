@@ -15,6 +15,7 @@ const Register = () => {
     address: "",
     password: "",
   });
+  const API_URL = process.env.API_URL;
 
   const changeusername = (e) => {
     setData({
@@ -69,7 +70,7 @@ const Register = () => {
       password: "",
     });
 
-    const url = "http://localhost:8080/api/restaurants/register";
+    const url = `${API_URL}/api/restaurants/register`;
     const options={
         method:"POST",
         headers:{
@@ -83,7 +84,7 @@ const Register = () => {
     }else{
         alert("Something Went Wrong");
     }
-    console.log(newobj);
+
   };
 
   return (

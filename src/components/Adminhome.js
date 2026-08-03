@@ -9,6 +9,7 @@ import { Navigate } from "react-router-dom";
 
 import { Link } from "react-router-dom";
 
+
 const stats = [
   { label: "Tables total", value: "18" },
   { label: "Occupied now", value: "11" },
@@ -19,6 +20,7 @@ const stats = [
 const Adminhome = () => {
 
   const data=Cookies.get("jwttoken");
+  
   if(data===undefined){
     return <Navigate to="/" true/>
   }

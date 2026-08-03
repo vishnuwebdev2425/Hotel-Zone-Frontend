@@ -25,13 +25,14 @@ const DinningStatus = () => {
   const [statusFilter, setStatusFilter] = useState("all");
 
   const jwt = Cookies.get("jwttoken");
+  const API_URL = process.env.API_URL;
 
   useEffect(() => {
     gettingDinningDetails();
   }, []);
 
   const gettingDinningDetails = async () => {
-    const url = "http://localhost:8080/api/restaurants/getalldinningadmin";
+    const url = `${API_URL}/api/restaurants/getalldinningadmin`;
 
     const options = {
       method: "GET",
