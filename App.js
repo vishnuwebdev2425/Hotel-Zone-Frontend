@@ -67,10 +67,6 @@ const rootaddress = createBrowserRouter([
         element: <Register />,
       },
       {
-        path: "hotellogin",
-        element: <HotelLogin />,
-      },
-      {
         path:"contactus",
         element:<ContactUs/>
 
@@ -101,6 +97,11 @@ const rootaddress = createBrowserRouter([
         path:"adddinning",
         element:<Dinning/>
       },
+        {
+        path: "hotellogin",
+        element: <HotelLogin />,
+      },
+        
        {
         path: "customerWorkspace",
         element: <Customer/>,
