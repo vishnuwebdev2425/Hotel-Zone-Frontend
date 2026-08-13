@@ -35,6 +35,7 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-[#0F2A22]/95 backdrop-blur-sm border-b border-[#D4AF7A]/20">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
+
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 shrink-0">
           <img

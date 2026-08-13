@@ -32,12 +32,12 @@ const Customer = () => {
             Please log in with your credentials to access the HotelZone guest
             workspace.
           </p>
-          <a
-            href="/hotellogin"
-            className="inline-block bg-[#0F2A22] text-[#F3EFE6] text-xs font-semibold tracking-wider uppercase px-6 py-3.5 rounded-lg hover:bg-[#163a30] transition-all shadow-md"
-          >
-            Return to Login
-          </a>
+             <Link
+      to="/hotellogin"
+      className="inline-block bg-[#0F2A22] text-[#F3EFE6] text-xs font-semibold tracking-wider uppercase px-6 py-3.5 rounded-lg hover:bg-[#163a30] transition-all shadow-md"
+    >
+      Return to Login
+    </Link>
         </div>
       </div>
     );
