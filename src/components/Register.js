@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 /**
  * Uses the same fonts as Header.jsx / Body.jsx / Footer.jsx — make sure
@@ -146,13 +147,12 @@ const Register = () => {
           </h1>
           <p className="text-sm text-[#0F2A22]/60 mb-9">
             Already on HotelZone?{" "}
-            <a
-              href="/login"
-              className="text-[#B08D57] border-b border-[#B08D57]/40 hover:border-[#B08D57]"
+            <Link
+              to="/login"
+              className="text-[#B08D57] border-b border-[#B08D57]/40 hover:border-[#B08D57] transition-colors duration-200"
             >
               Sign in instead
-            </a>
-            .
+            </Link>
           </p>
 
           <form onSubmit={finalfunction} className="flex flex-col gap-5">
