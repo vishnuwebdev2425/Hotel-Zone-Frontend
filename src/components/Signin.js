@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Cookie from "js-cookie"
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 /**
  * Uses the same fonts as Header.jsx / Body.jsx / Footer.jsx / Register.jsx —
@@ -123,13 +123,12 @@ const Signin = () => {
           </h1>
           <p className="text-sm text-[#0F2A22]/60 mb-9">
             New to HotelZone?{" "}
-            <a
-              href="/register"
-              className="text-[#B08D57] border-b border-[#B08D57]/40 hover:border-[#B08D57]"
+            <Link
+              to="/register"
+              className="text-[#B08D57] border-b border-[#B08D57]/40 hover:border-[#B08D57] transition-colors duration-200"
             >
               Register your hotel
-            </a>
-            .
+            </Link>
           </p>
 
           <form onSubmit={finalfunction} className="flex flex-col gap-5">

@@ -65,7 +65,7 @@ const Body = () => {
                 Register Now
               </button>
             </Link>
-            <Link to="/howitworks">
+            <Link to="/">
               <button className="border border-[#0F2A22]/25 text-[#0F2A22] text-sm font-semibold tracking-wide px-7 py-3 rounded-sm hover:border-[#0F2A22] transition-colors">
                 See how it works
               </button>
